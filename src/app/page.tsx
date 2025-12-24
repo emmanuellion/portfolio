@@ -2,10 +2,48 @@
 
 import { useEffect, useState } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Code2, Database, Smartphone, ArrowRight, Brain, BookOpen, Target, Briefcase, Calendar, MapPin, TrendingUp, Server, Layers, Package } from 'lucide-react';
+import Script from 'next/script';
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const [activeSection, setActiveSection] = useState('home');
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Emmanuel Lion',
+    url: 'https://emmanuellion.fr',
+    image: 'https://emmanuellion.fr/og-image.jpg',
+    sameAs: [
+      'https://www.linkedin.com/in/lion-emmanuel',
+      'https://github.com',
+    ],
+    jobTitle: 'Étudiant Ingénieur en Développement Logiciel',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'BRL Ingénierie',
+    },
+    alumniOf: {
+      '@type': 'EducationalOrganization',
+      name: 'IMT Mines Alès',
+    },
+    knowsAbout: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Node.js',
+      'Développement Full Stack',
+      'Développement Web',
+      'Développement Mobile',
+    ],
+    email: 'emmanuel.lion30@gmail.com',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Nîmes',
+      addressRegion: 'Occitanie',
+      addressCountry: 'FR',
+    },
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -113,7 +151,13 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <Script
+        id="json-ld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrollY > 50 ? 'bg-white/80 backdrop-blur-md shadow-sm' : 'bg-transparent'
@@ -392,5 +436,6 @@ export default function Home() {
         </div>
       </footer>
     </div>
+    </>
   );
 }

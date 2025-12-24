@@ -1,0 +1,15 @@
+# robots.txt pour emmanuellion.fr
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://emmanuellion.fr/sitemap.xml
+
+# Empêcher l'indexation de fichiers spécifiques
+Disallow: /api/
+Disallow: /_next/static/
+Disallow: /*.json$
+
+# Crawl-delay pour être courtois
+Crawl-delay: 1
