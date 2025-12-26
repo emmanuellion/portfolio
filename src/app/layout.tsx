@@ -38,6 +38,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://emmanuellion.fr",
   },
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     type: "website",
     locale: "fr_FR",
@@ -66,6 +69,9 @@ export const metadata: Metadata = {
   verification: {
     google: "google-site-verification-code",
   },
+  other: {
+    "theme-color": "#ffffff",
+  },
 };
 
 export default function RootLayout({
@@ -75,12 +81,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-        {/*<link rel="apple-touch-icon" href="/apple-touch-icon.png" />*/}
-        <meta name="theme-color" content="#ffffff" />
-        <title>Portfolio - LION Emmanuel</title>
-      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
