@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Code2, Database, Smartphone, ArrowRight, Brain, BookOpen, Target, Briefcase, Calendar, MapPin, TrendingUp, Server, Layers, Package } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Code2, ArrowRight, Brain, Calendar, MapPin, TrendingUp, Server, Layers, Package } from 'lucide-react';
 import Script from 'next/script';
 
 export default function Home() {

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import {ReactNode} from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,20 +45,11 @@ export const metadata: Metadata = {
     title: "Emmanuel Lion - Étudiant Ingénieur en Développement Logiciel",
     description: "Portfolio d'Emmanuel Lion, étudiant ingénieur en développement logiciel à IMT Mines Alès. Spécialisé en Next.js, React, TypeScript et développement full-stack.",
     siteName: "Emmanuel Lion Portfolio",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Emmanuel Lion - Portfolio",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Emmanuel Lion - Étudiant Ingénieur en Développement Logiciel",
     description: "Portfolio d'Emmanuel Lion, étudiant ingénieur en développement logiciel à IMT Mines Alès.",
-    images: ["/og-image.jpg"],
     creator: "@emmanuellion",
   },
   robots: {
@@ -79,18 +71,17 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="fr">
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        {/*<link rel="apple-touch-icon" href="/apple-touch-icon.png" />*/}
         <meta name="theme-color" content="#ffffff" />
+        <title>Portfolio - LION Emmanuel</title>
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
