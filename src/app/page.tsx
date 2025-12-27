@@ -384,17 +384,17 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a
-                href="mailto:emmanuel.lion30@gmail.com"
+                href="mailto:contact@emmanuellion.fr"
                 className="cursor-pointer inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 hover:shadow-lg transition-all duration-300 font-medium"
               >
                 <Mail className="w-4 h-4" />
-                emmanuel.lion30@gmail.com
+                contact@emmanuellion.fr
               </a>
             </div>
 
             <div className="flex gap-6 justify-center">
               <a
-                href="https://github.com"
+                href="https://github.com/emmanuellion"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-pointer w-12 h-12 flex items-center justify-center border border-gray-300 rounded-lg hover:border-gray-900 hover:bg-gray-50 hover:shadow-md transition-all duration-300 text-gray-600 hover:text-gray-900"
@@ -410,7 +410,7 @@ export default function Home() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="mailto:emmanuel.lion30@gmail.com"
+                href="mailto:contact@emmanuellion.fr"
                 className="cursor-pointer w-12 h-12 flex items-center justify-center border border-gray-300 rounded-lg hover:border-gray-900 hover:bg-gray-50 hover:shadow-md transition-all duration-300 text-gray-600 hover:text-gray-900"
               >
                 <Mail className="w-5 h-5" />
@@ -425,7 +425,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-600">
-              © 2025 Emmanuel Lion. Développé avec Next.js & Tailwind CSS
+              © 2025 Emmanuel Lion.
             </p>
             <div className="flex gap-4">
               <span className="text-sm text-gray-600">IMT Mines Alès</span>
